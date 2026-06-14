@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Instrument_Sans, Inter, Noto_Sans_Sinhala, Noto_Sans_Tamil } from "next/font/google";
+import { Instrument_Sans, Inter, Noto_Sans_Arabic, Noto_Sans_Sinhala, Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import { Footer, JsonLd } from "@/components/ui";
 import { Header } from "@/components/header";
@@ -11,4 +11,5 @@ const display=Instrument_Sans({subsets:["latin"],variable:"--font-display",displ
 const body=Inter({subsets:["latin"],variable:"--font-body",display:"swap"});
 const sinhala=Noto_Sans_Sinhala({subsets:["sinhala"],variable:"--font-sinhala",display:"swap"});
 const tamil=Noto_Sans_Tamil({subsets:["tamil"],variable:"--font-tamil",display:"swap"});
-export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className={`${display.variable} ${body.variable} ${sinhala.variable} ${tamil.variable}`}><body><LanguageProvider><JsonLd data={{"@context":"https://schema.org","@type":"EmploymentAgency",name:contact.company,url:"https://www.topway.lk",email:contact.email,telephone:contact.mobile,address:{"@type":"PostalAddress",streetAddress:contact.address[0],addressLocality:"Colombo",addressCountry:"LK"}}}/><AnalyticsEvents/><Header/><main>{children}</main><Footer/></LanguageProvider></body></html>}
+const arabic=Noto_Sans_Arabic({subsets:["arabic"],variable:"--font-arabic",display:"swap"});
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" className={`${display.variable} ${body.variable} ${sinhala.variable} ${tamil.variable} ${arabic.variable}`}><body><LanguageProvider><JsonLd data={{"@context":"https://schema.org","@type":"EmploymentAgency",name:contact.company,url:"https://www.topway.lk",email:contact.email,telephone:contact.mobile,address:{"@type":"PostalAddress",streetAddress:contact.address[0],addressLocality:"Colombo",addressCountry:"LK"}}}/><AnalyticsEvents/><Header/><main>{children}</main><Footer/></LanguageProvider></body></html>}
