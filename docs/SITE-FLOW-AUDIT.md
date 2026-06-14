@@ -37,6 +37,11 @@
 - Job Registry remains a first-class route at every navigation mode.
 - Sticky mobile actions remain limited to Call, WhatsApp and Request Workers.
 
+## Language Discoverability
+- Desktop navigation uses a labelled globe control and displays the selected language by name.
+- Mobile pages show an always-visible English, Sinhala and Tamil switch directly beneath the header.
+- The mobile menu repeats a larger labelled chooser with clear active states and touch-friendly controls.
+
 ## Final Verification
 - Confirmed no `FAQSection`, `<details>`, `<summary>` or FAQ CSS remains in application code.
 - Confirmed Verified Jobs links directly to `/job-registry` in desktop navigation, mobile navigation and footer.
