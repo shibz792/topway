@@ -39,8 +39,10 @@
 
 ## Language Discoverability
 - Desktop navigation uses a labelled globe control and displays the selected language by name.
-- Mobile pages show an always-visible English, Sinhala and Tamil switch directly beneath the header.
+- Mobile pages show an always-visible English, Sinhala, Tamil and Arabic switch directly beneath the header.
 - The mobile menu repeats a larger labelled chooser with clear active states and touch-friendly controls.
+- Full rendered-route phrase coverage is generated for Sinhala, Tamil and Arabic, with reviewed translations taking priority.
+- Official names, licence identifiers, acronyms, contact details and currency codes remain untranslated where appropriate.
 
 ## Final Verification
 - Confirmed no `FAQSection`, `<details>`, `<summary>` or FAQ CSS remains in application code.
